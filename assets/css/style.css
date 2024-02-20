@@ -42,7 +42,8 @@ body {
 
 /* Header style rules */
 header {
-    background-color: blue;
+    justify-content: start; 
+    background-color: red;
     margin-top: 0.5%;
     margin-bottom: 0.5%;
     padding: 0.5%;
