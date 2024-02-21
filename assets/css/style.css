@@ -40,24 +40,31 @@ body {
     font-family: 'Roboto Flex', sans-serif;
 }
 
-/* Header style rules */
+/*took logo & nav elements out of header*/
+
+
+
+/* Header style rules
 header {
-    justify-content: start; 
+    border: 0.5rem;
+    border-color: black;
+    border-style: solid;
     background-color: red;
     margin-top: 0.5%;
     margin-bottom: 0.5%;
-    padding: 0.5%;
+    padding: 1%;
     /*add some padding left and right to prevent our text from
     sticking to the side of the screen.*/
-    position: fixed;
-    width: 100%;
+    
+    /*position: fixed;*/
+    /*width: 100%;*/
 
-    z-index: 99;
+    /*z-index: 99;
     /*we want the nav bar to scroll along. We'll set its position to fixed and use a high z-index value.*/
     /*use 99 to make sure it's layered on top of any other elements that might have a z-index later.*/
-    box-shadow: 0 2px 2px yellow;
-    display: flex;   
-}
+   /*box-shadow: 0 2px 2px yellow;
+    display: flex;
+}*/
 
 
 h1 {
@@ -67,7 +74,7 @@ h1 {
     letter-spacing: 2px;
     color: yellow;
     border-style: solid;
-    border-color: blue;
+    border-color: pink;
     border-width: 1rem;
     padding:1rem;
     margin-left: 1rem;
