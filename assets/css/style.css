@@ -7,14 +7,6 @@
     box-sizing: border-box;
 }
 
-
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 /*This should go directly under the style rule earlier with the asterisk*/
 /*as it's next in line as the most generic of the style rules*/
 /*and above the rest of the styles which are more specific*/
