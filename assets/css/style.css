@@ -1,15 +1,18 @@
 /*Google Fonts Import*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-/* Asterisk wildcard selector to override default styles added by the browser*/
 * {
-    padding:0%;
-    margin:0%;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
+}
 
-    /* set the box-sizing property for all our elements to border box*/
-    /* so that later when we set the height or width to an element*/
-    /* it will be applied to the entire element including the border*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 /*This should go directly under the style rule earlier with the asterisk*/
@@ -17,8 +20,8 @@
 /*and above the rest of the styles which are more specific*/
 /* General styles */
 body {
-    margin: 0%;
-    width:100%;
+
+    width: 100%;
     min-height: 100vh;
     /*using min-height will allow it to stretch larger than */
     /*the height of the screen when there is enough content on the page that the user needs to scroll*/
@@ -34,10 +37,11 @@ body {
 }
 
 /* Header style rules*/
-header { /*header is outermost container*/
-    
+header {
+    /*header is outermost container*/
+
     background-color: blue;
-    padding 0 1rem;
+    padding: 0 1rem;
     /*add some padding left and right to prevent our text from
     sticking to the side of the screen.*/
     position: fixed;
@@ -45,7 +49,7 @@ header { /*header is outermost container*/
     /*we want the nav bar to scroll along. We'll set its position to fixed and use a high z-index value.*/
     /*use 99 to make sure it's layered on top of any other elements that might have a z-index later.*/
     width: 100%;
-    box-shadow: 0 2px 2px yellow; 
+    box-shadow: 0 2px 2px yellow;
 }
 
 header a {
