@@ -1,20 +1,11 @@
-/* Color scheme
-#8D8741, Dark olive green
-#659DBD, Darkish sky blue
-#DAAD86, Dark Peach
-#BC986A, Dark Beige
-#FBEEC1 Beige Cream
-*/
-
 /*Google Fonts Import*/
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap')
 
 /* Asterisk wildcard selector to override default styles added by the browser*/
 * {
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+    padding:0%;
+    margin:0%;
+    box-sizing: border-box;
 
     /* set the box-sizing property for all our elements to border box*/
     /* so that later when we set the height or width to an element*/
@@ -26,6 +17,8 @@ box-sizing: border-box;
 /*and above the rest of the styles which are more specific*/
 /* General styles */
 body {
+    margin: 0%;
+    width:100%;
     min-height: 100vh;
     /*using min-height will allow it to stretch larger than */
     /*the height of the screen when there is enough content on the page that the user needs to scroll*/
@@ -33,86 +26,73 @@ body {
     /*We'll also want to set the display to flex and the flex-direction*/
     flex-direction: column;
     /*to column so that our elements will show under each other*/
-   
+
     /*Generic Project Styles*/
     color: yellow;
     /*for the moment showing up as just the buller colour beside each of the nav items which then disappears when I set the list-style-type in navmenu to none*/
     font-family: 'Roboto Flex', sans-serif;
 }
 
-/*took logo & nav elements out of header*/
-
-
-
-/* Header style rules
-header {
-    border: 0.5rem;
-    border-color: black;
-    border-style: solid;
-    background-color: red;
-    margin-top: 0.5%;
-    margin-bottom: 0.5%;
-    padding: 1%;
+/* Header style rules*/
+header { /*header is outermost container*/
+    
+    background-color: blue;
+    padding 0 1rem;
     /*add some padding left and right to prevent our text from
     sticking to the side of the screen.*/
-    
-    /*position: fixed;*/
-    /*width: 100%;*/
-
-    /*z-index: 99;
+    position: fixed;
+    z-index: 99;
     /*we want the nav bar to scroll along. We'll set its position to fixed and use a high z-index value.*/
     /*use 99 to make sure it's layered on top of any other elements that might have a z-index later.*/
-   /*box-shadow: 0 2px 2px yellow;
-    display: flex;
-}*/
+    width: 100%;
+    box-shadow: 0 2px 2px yellow; 
+}
+
+header a {
+    text-decoration: none;
+}
 
 
 h1 {
     font-family: 'Roboto Mono', sans-serif;
     text-transform: uppercase;
     background-color: blue;
-    letter-spacing: 2px;
+    letter-spacing: 1%;
     color: yellow;
     border-style: solid;
     border-color: pink;
-    border-width: 1rem;
-    padding:1rem;
-    margin-left: 1rem;
-    
-
+    border-width: 1%;
+    padding: 3%;
+    margin-left: 1%
 }
 
-header a {
-    text-decoration: none;
-    color: inherit;
-   
 
-}
+
 
 #dropdownmenu {
     font-size: 130%;
     letter-spacing: 4px;
     list-style-type: none;
-   
+
 }
 
 .fa-bars {
-    padding:50%;
-   
+    padding: 50%;
+
 }
 
-#dropdownmenu >li {
+#dropdownmenu>li {
     margin-bottom: 1em;
     padding: 1em;
-    background-color:blue;
-   
-   
-   
+    background-color: blue;
+
+
+
     border-style: solid;
     border-color: yellow;
     border-width: 3%;
     border-radius: 1em;
-    text-align:inherit;
+    text-align: inherit;
     width: fit-content;
     align-self: center;
 }
@@ -120,15 +100,17 @@ header a {
 /*For toggle/dropdown menu the nav bar styles need to be separate from the rest of the header content*/
 /*Navbar styles with collapsable menu*/
 nav {
-    position: absolute; /*absolute positioning takes an element outside the normal flow of the page structure.*/
-                        /*It is positioned relative to the nearest positioned ancestor, in our case, the header*/
+    position: absolute;
+    /*absolute positioning takes an element outside the normal flow of the page structure.*/
+    /*It is positioned relative to the nearest positioned ancestor, in our case, the header*/
     background-color: blue;
-    width: 100%;
+    min-width: 100vw;
     left: 0;
 
-    
+
     display: none;
-    top: 100%;/*this tells the navigation element that teh top of the element should start at the bottom of its parent*/
+    top: 100%;
+    /*this tells the navigation element that teh top of the element should start at the bottom of its parent*/
 
 }
 
@@ -136,12 +118,12 @@ nav {
 /* use the tilde to indicate that we want to target the adjoining nav element*/
 /*Nav toggle*/
 #nav-toggle:checked~nav {
-    display:block;
+    display: block;
 }
 
 #nav-toggle {
     display: none;
-    
+
 }
 
 .nav-toggle-label {
@@ -152,10 +134,10 @@ nav {
 
 /* Main content style rules */
 main {
-    background-color:blue;
+    background-color: blue;
     /*Make main element take up any surplus space to push footer down*/
     flex: 1 0 auto;
-    margin-top: 47px; 
+    margin-top: 47px;
 
 }
 
@@ -166,48 +148,54 @@ footer {
 
 /*Media query: tablets & larger (768px & above)*/
 @media screen and (min-width: 768px) {
+
     /*Header*/
-nav {
-    display:flex; /*to make sure the nav bar is always displayed so we can see all the nav links*/
-    position: relative; /*so the nav bar will appear back inside the header*/
-    box-shadow: none;/*to hide the box shadow*/
-     /*no longer takes up all the space in the header, allowing flex styles from earlier to push it to the right*/
-    padding-right: 1rem; /*so menu items won't stick to the right of the screen*/
-    
-}
+    nav {
+        display: flex;
+        /*to make sure the nav bar is always displayed so we can see all the nav links*/
+        position: relative;
+        /*so the nav bar will appear back inside the header*/
+        box-shadow: none;
+        /*to hide the box shadow*/
+        /*no longer takes up all the space in the header, allowing flex styles from earlier to push it to the right*/
+        padding-right: 1rem;
+        /*so menu items won't stick to the right of the screen*/
 
-#dropdownmenu {
-    display: flex; /*so items will now show side by side & not under each other*/
+    }
 
-}
+    #dropdownmenu {
+        display: flex;
+        /*so items will now show side by side & not under each other*/
 
-#dropdownmenu >li {
-    margin-right: 1rem;
-    padding-bottom: none;
-}
+    }
 
-.nav-toggle-label{
-    display: none; 
-}
+    #dropdownmenu>li {
+        margin-right: 1rem;
+        padding-bottom: none;
+    }
 
-#logo {
-    font-size: 250%;
-    line-height: 75px;
-    margin: 0 0.5rem; 
-}
+    .nav-toggle-label {
+        display: none;
+    }
 
-/*Main Content*/
-main {
-    /*Push main content down to accommodate larger header*/
-    margin-top: 79px;
-    
-}
+    #logo {
+        font-size: 250%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    /*Main Content*/
+    main {
+        /*Push main content down to accommodate larger header*/
+        margin-top: 79px;
+
+    }
 
 
 
 
 
-/*body {
+    /*body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 20px;
     background-color: #659DBD;
@@ -218,9 +206,9 @@ h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }*/
 
-/* If you want to use this code for your page, copy everything below this point and give attribution to: Responsive Navigation based on Malia Havlicek's codepen: https://codepen.io/maliahavlicek/pen/LYeBwNY */
+    /* If you want to use this code for your page, copy everything below this point and give attribution to: Responsive Navigation based on Malia Havlicek's codepen: https://codepen.io/maliahavlicek/pen/LYeBwNY */
 
-/*html {
+    /*html {
     scroll-behavior: smooth;
 }
 
@@ -283,8 +271,8 @@ nav {
     display: none;
 }*/
 
-/* phones and portrait tablets */
-/*@media screen and (max-width: 768px) {
+    /* phones and portrait tablets */
+    /*@media screen and (max-width: 768px) {
 
     a.show-mobile {
         text-decoration: none;
@@ -333,8 +321,8 @@ nav {
 
     .menu li {
         display: flex;*/
-/* magic */
-/*align-self: center;
+    /* magic */
+    /*align-self: center;
         width: 100%;
         opacity: 0;
         visibility: hidden;
