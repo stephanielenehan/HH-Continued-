@@ -1,5 +1,5 @@
 /*Google Fonts Import*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap'); 
 
 * {
     padding: 0;
@@ -13,7 +13,7 @@
 /* General styles */
 body {
 
-    width: 100%;
+    /*width: 100%;*/
     min-height: 100vh;
     /*using min-height will allow it to stretch larger than */
     /*the height of the screen when there is enough content on the page that the user needs to scroll*/
@@ -33,7 +33,9 @@ header {
     /*header is outermost container*/
 
     background-color: blue;
-    padding: 0 1rem;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    padding:0.5%
     /*add some padding left and right to prevent our text from
     sticking to the side of the screen.*/
     position: fixed;
@@ -44,24 +46,24 @@ header {
     box-shadow: 0 2px 2px yellow;
 }
 
-header a {
-    text-decoration: none;
-}
-
 
 h1 {
     font-family: 'Roboto Mono', sans-serif;
     text-transform: uppercase;
     background-color: blue;
-    letter-spacing: 1%;
+    letter-spacing: 2px;
     color: yellow;
     border-style: solid;
-    border-color: pink;
-    border-width: 1%;
-    padding: 3%;
-    margin-left: 1%
+    border-color: blue;
+    border-width: 1rem;
+    padding: 1rem;
+    margin-left: 1rem;
 }
 
+header a {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 
@@ -81,9 +83,6 @@ h1 {
     margin-bottom: 1em;
     padding: 1em;
     background-color: blue;
-
-
-
     border-style: solid;
     border-color: yellow;
     border-width: 3%;
@@ -100,10 +99,7 @@ nav {
     /*absolute positioning takes an element outside the normal flow of the page structure.*/
     /*It is positioned relative to the nearest positioned ancestor, in our case, the header*/
     background-color: blue;
-    min-width: 100vw;
     left: 0;
-
-
     display: none;
     top: 100%;
     /*this tells the navigation element that teh top of the element should start at the bottom of its parent*/
@@ -186,6 +182,7 @@ footer {
         margin-top: 79px;
 
     }
+}
 
 
 
