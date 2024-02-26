@@ -138,17 +138,22 @@ footer {
     background-color: yellow;
 }
 
+/***************************************************************/
+/*MEDIA QUERIES*/
+/***************************************************************/
+
 /*Media query: tablets & larger (768px & above)*/
 @media screen and (min-width: 768px) {
 
     /*Header*/
     nav {
-        display: flex;
+        display: block;
         /*to make sure the nav bar is always displayed so we can see all the nav links*/
         position: relative;
         /*so the nav bar will appear back inside the header*/
         box-shadow: none;
         /*to hide the box shadow*/
+        width:fit-content;
         /*no longer takes up all the space in the header, allowing flex styles from earlier to push it to the right*/
         padding-right: 1rem;
         /*so menu items won't stick to the right of the screen*/
