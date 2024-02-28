@@ -1,5 +1,5 @@
 /*Google Fonts Import*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
     padding: 0;
@@ -33,9 +33,7 @@ header {
     /*header is outermost container*/
 
     background-color: blue;
-    margin-top: 0.5%;
-    margin-bottom: 0.5%;
-    padding:0.5%
+    padding: 0 1rem;
     /*add some padding left and right to prevent our text from
     sticking to the side of the screen.*/
     position: fixed;
@@ -44,20 +42,9 @@ header {
     /*use 99 to make sure it's layered on top of any other elements that might have a z-index later.*/
     width: 100%;
     box-shadow: 0 2px 2px yellow;
-}
-
-
-h1 {
-    font-family: 'Roboto Mono', sans-serif;
-    text-transform: uppercase;
-    background-color: blue;
-    letter-spacing: 2px;
-    color: yellow;
-    border-style: solid;
-    border-color: blue;
-    border-width: 1rem;
-    padding: 1rem;
-    margin-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 header a {
@@ -65,23 +52,29 @@ header a {
     color: inherit;
 }
 
+h1 {
+    font-family: 'Roboto Mono', sans-serif;
+    text-transform: uppercase;
+    background-color: blue;
+    letter-spacing: 2px;
+    color: yellow;
 
+    /*border-style: solid;
+    border-color: blue;
+    border-width: 1rem;
+    padding: 1rem;
+    margin-left: 1rem;*/
+}
 
-#dropdownmenu {
-    font-size: 130%;
+#menu {
+    font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
-
 }
 
-.fa-bars {
-    padding: 50%;
-
-}
-
-#dropdownmenu>li {
+#menu>li {
     margin-bottom: 1em;
-    padding: 1em;
+    /*padding: 1em;
     background-color: blue;
     border-style: solid;
     border-color: yellow;
@@ -89,8 +82,17 @@ header a {
     border-radius: 1em;
     text-align: inherit;
     width: fit-content;
-    align-self: center;
+    align-self: center;*/
 }
+
+.active {
+    border-bottom: 1px solid yellow;
+}
+
+/*.fa-bars {
+    padding: 50%;
+
+}*/
 
 /*For toggle/dropdown menu the nav bar styles need to be separate from the rest of the header content*/
 /*Navbar styles with collapsable menu*/
@@ -99,7 +101,10 @@ nav {
     /*absolute positioning takes an element outside the normal flow of the page structure.*/
     /*It is positioned relative to the nearest positioned ancestor, in our case, the header*/
     background-color: blue;
+    width: 100%;
     left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px;
     display: none;
     top: 100%;
     /*this tells the navigation element that teh top of the element should start at the bottom of its parent*/
@@ -119,7 +124,7 @@ nav {
 }
 
 .nav-toggle-label {
-    font-size: 5rem;
+    font-size: 2rem;
     background-color: blue;
 }
 
@@ -142,7 +147,7 @@ footer {
 /*MEDIA QUERIES*/
 /***************************************************************/
 
-/*Media query: tablets & larger (768px & above)*/
+/*Media query: tablets & larger (768px & above) >=768px*/
 @media screen and (min-width: 768px) {
 
     /*Header*/
@@ -153,47 +158,46 @@ footer {
         /*so the nav bar will appear back inside the header*/
         box-shadow: none;
         /*to hide the box shadow*/
-        width:fit-content;
+        width: fit-content;
         /*no longer takes up all the space in the header, allowing flex styles from earlier to push it to the right*/
         padding-right: 1rem;
         /*so menu items won't stick to the right of the screen*/
-
     }
 
-    #dropdownmenu {
+    #menu {
         display: flex;
         /*so items will now show side by side & not under each other*/
-
     }
 
-    #dropdownmenu>li {
+    /*#menu>li {
         margin-right: 1rem;
-        padding-bottom: none;
-    }
+        /*padding-bottom: none;*/
+    /*}
 
     .nav-toggle-label {
         display: none;
     }
 
-    #logo {
+    /*#logo {
         font-size: 250%;
         line-height: 75px;
         margin: 0 0.5rem;
-    }
+    }*/
+}
 
-    /*Main Content*/
-    main {
-        /*Push main content down to accommodate larger header*/
-        margin-top: 79px;
+/*Main Content*/
+main {
+    /*Push main content down to accommodate larger header*/
+    margin-top: 79px;
 
-    }
 }
 
 
 
 
 
-    /*body {
+
+/*body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 20px;
     background-color: #659DBD;
@@ -204,9 +208,9 @@ h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }*/
 
-    /* If you want to use this code for your page, copy everything below this point and give attribution to: Responsive Navigation based on Malia Havlicek's codepen: https://codepen.io/maliahavlicek/pen/LYeBwNY */
+/* If you want to use this code for your page, copy everything below this point and give attribution to: Responsive Navigation based on Malia Havlicek's codepen: https://codepen.io/maliahavlicek/pen/LYeBwNY */
 
-    /*html {
+/*html {
     scroll-behavior: smooth;
 }
 
@@ -269,8 +273,8 @@ nav {
     display: none;
 }*/
 
-    /* phones and portrait tablets */
-    /*@media screen and (max-width: 768px) {
+/* phones and portrait tablets */
+/*@media screen and (max-width: 768px) {
 
     a.show-mobile {
         text-decoration: none;
@@ -319,8 +323,8 @@ nav {
 
     .menu li {
         display: flex;*/
-    /* magic */
-    /*align-self: center;
+/* magic */
+/*align-self: center;
         width: 100%;
         opacity: 0;
         visibility: hidden;
