@@ -169,20 +169,19 @@ footer {
         /*so items will now show side by side & not under each other*/
     }
 
-    /*#menu>li {
+    #menu>li {
         margin-right: 1rem;
-        /*padding-bottom: none;*/
-    /*}
+    }
 
     .nav-toggle-label {
         display: none;
     }
 
-    /*#logo {
-        font-size: 250%;
+    #logo {
+        font-size: 230%;
         line-height: 75px;
         margin: 0 0.5rem;
-    }*/
+    }
 }
 
 /*Main Content*/
